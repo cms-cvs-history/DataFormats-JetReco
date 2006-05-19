@@ -15,17 +15,15 @@
  * \version   2nd Version April 27, 2006. F.Ratnikov. Use ROOT's LorentzVector
  *
  ************************************************************/
-#include "DataFormats/Math/interface/LorentzVector.h"
+#include "DataFormats/JetReco/interface/Jet.h"
 
 struct CommonJetData {
 public:
-  /// Lorentz vector
-  typedef math::XYZTLorentzVector LorentzVector;
   /** Default Constructor */
   CommonJetData() : numberOfConstituents(0) {}
 
   /** Constructor from values*/
-  CommonJetData(const LorentzVector& p4, int n);
+  CommonJetData(const Jet::LorentzVector& p4, int n);
 
   CommonJetData(double px, double py, double pz, double e, int n);
 
@@ -56,7 +54,7 @@ public:
   /** Pseudorapidity of the jet*/
   double eta;
   /** 4-momentum of the jet*/
-  LorentzVector mP4;
+  Jet::LorentzVector mP4;
   /** Number of constituents of the Jet*/
   int numberOfConstituents;
 

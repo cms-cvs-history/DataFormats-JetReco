@@ -1,11 +1,12 @@
 // GenJet.cc
 // Fedor Ratnikov, UMd
-// $Id: GenJet.cc,v 1.2 2006/04/25 03:43:56 fedor Exp $
+// $Id: GenJet.cc,v 1.3 2006/04/27 18:44:03 fedor Exp $
 
 //Own header file
 #include "DataFormats/JetReco/interface/GenJet.h"
 
 // Jet four-momentum
+const Jet::LorentzVector& GenJet::p4 () const {return m_data.mP4;}
 double GenJet::px() const {return m_data.mP4.Px();}
 double GenJet::py() const {return m_data.mP4.Py();}
 double GenJet::pz() const {return m_data.mP4.Pz();}

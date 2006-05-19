@@ -10,6 +10,7 @@
 #include "DataFormats/JetReco/interface/CaloJet.h"
 
 // Jet four-momentum
+const Jet::LorentzVector& CaloJet::p4 () const {return m_data.mP4;}
 double CaloJet::px() const {return m_data.mP4.Px();}
 double CaloJet::py() const {return m_data.mP4.Py();}
 double CaloJet::pz() const {return m_data.mP4.Pz();}

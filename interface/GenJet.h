@@ -46,8 +46,10 @@ public:
   /** Default destructor*/
   virtual ~GenJet() {};
 
-  /** The Jet four-vector as a true Lorentz vector
-  \return the jet momentum component along the x axis */
+  /** The Jet four-vector as a true Lorentz vector */
+  /** Lorentz vector itself */
+  virtual const LorentzVector& p4 () const;
+  /** return the jet momentum component along the x axis */
   virtual double px() const;
   /** Returns the jet momentum component along the y axis */
   virtual double py() const;
@@ -56,8 +58,8 @@ public:
   /** Returns the total energy of the jet*/
   virtual double energy () const;
 
-  /** Standard quantities derived from the Jet Lorentz vector
-  /\return the modulus of the momentum of the jet */
+  /** Standard quantities derived from the Jet Lorentz vector */
+  /** return the modulus of the momentum of the jet */
   virtual double p() const;
   /** Returns the transverse momentum of the jet*/
   virtual double pt() const;

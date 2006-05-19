@@ -14,8 +14,12 @@
  *
  ************************************************************/
 
+#include "DataFormats/Math/interface/LorentzVector.h"
+
 class Jet {
 public:
+  /// Lorentz vector
+  typedef math::XYZTLorentzVector LorentzVector;
 
   /** The Jet four-vector as a true Lorentz vector
   \return the jet momentum component along the x axis */
@@ -27,8 +31,10 @@ public:
   /** Returns the total energy of the jet*/
   virtual double energy () const = 0;
 
-  /** Standard quantities derived from the Jet Lorentz vector
-  /\return the modulus of the momentum of the jet */
+  /** Standard quantities derived from the Jet Lorentz vector */
+  /** Lorentz vector itself */
+  virtual const LorentzVector& p4 () const;
+  /** return the modulus of the momentum of the jet */
   virtual double p() const = 0;
   /** Returns the transverse momentum of the jet*/
   virtual double pt() const = 0;

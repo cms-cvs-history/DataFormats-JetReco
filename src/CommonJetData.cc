@@ -5,7 +5,7 @@
 
 #include "DataFormats/JetReco/interface/CommonJetData.h"
 
-CommonJetData::CommonJetData(const LorentzVector& p4, int n) 
+CommonJetData::CommonJetData(const Jet::LorentzVector& p4, int n) 
   : 
   mP4 (p4), 
   numberOfConstituents (n) 
