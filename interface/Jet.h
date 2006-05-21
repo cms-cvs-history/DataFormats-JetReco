@@ -11,7 +11,7 @@
  * \author Fernando Varela Rodriguez, Boston University
  *
  * \version   1st Version April 22, 2005.
- *
+ * $Id$
  ************************************************************/
 
 #include "DataFormats/Math/interface/LorentzVector.h"
@@ -33,7 +33,7 @@ public:
 
   /** Standard quantities derived from the Jet Lorentz vector */
   /** Lorentz vector itself */
-  virtual const LorentzVector& p4 () const;
+  virtual const LorentzVector& p4 () const = 0;
   /** return the modulus of the momentum of the jet */
   virtual double p() const = 0;
   /** Returns the transverse momentum of the jet*/
