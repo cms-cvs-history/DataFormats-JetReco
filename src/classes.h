@@ -9,8 +9,9 @@
 #include "DataFormats/JetReco/interface/JetTrackMatch.h"
 #include "DataFormats/JetReco/interface/JetToFloatAssociation.h"
 #include "DataFormats/Common/interface/Wrapper.h"
-
 #include "DataFormats/Common/interface/RefToBase.h"
+#include "DataFormats/Common/interface/RefHolder.h"
+#include "DataFormats/Common/interface/Holder.h"
 
 using namespace reco;
 
@@ -63,6 +64,10 @@ namespace {
     JetToFloatAssociation::Objects         j2f_oo;
     edm::Wrapper<JetToFloatAssociation::Container>  j2f_c_w;
 
+    edm::RefToBase<reco::Jet>  rbj1;
+    edm::reftobase::IndirectHolder<reco::Jet> rbj3;
+    edm::reftobase::Holder<reco::Jet, reco::CaloJetRef> rbj4;
+    edm::reftobase::RefHolder<reco::CaloJetRef> rbj5;
   }
 }
 #endif
