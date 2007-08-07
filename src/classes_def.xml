@@ -68,4 +68,5 @@
   <class name="edm::reftobase::Holder<reco::Jet, reco::CaloJetRef>" />
   <class name="edm::reftobase::IndirectHolder<reco::Jet>" />
   <class name="edm::reftobase::RefHolder<reco::CaloJetRef>" />
+  <class name="edm::reftobase::Holder<reco::Candidate,edm::RefToBase<reco::Jet> > "/> 
 </lcgdict>

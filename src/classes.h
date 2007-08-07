@@ -68,6 +68,7 @@ namespace {
     edm::reftobase::IndirectHolder<reco::Jet> rbj3;
     edm::reftobase::Holder<reco::Jet, reco::CaloJetRef> rbj4;
     edm::reftobase::RefHolder<reco::CaloJetRef> rbj5;
+    edm::reftobase::Holder<reco::Candidate,edm::RefToBase<reco::Jet> >  rtbb6;
   }
 }
 #endif
