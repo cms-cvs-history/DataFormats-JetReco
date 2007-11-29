@@ -67,8 +67,27 @@ namespace {
     edm::RefToBase<reco::Jet>  rbj1;
     edm::reftobase::IndirectHolder<reco::Jet> rbj3;
     edm::reftobase::Holder<reco::Jet, reco::CaloJetRef> rbj4;
-    edm::reftobase::RefHolder<reco::CaloJetRef> rbj5;
     edm::reftobase::Holder<reco::Candidate,edm::RefToBase<reco::Jet> >  rtbb6;
+
+    edm::reftobase::Holder<reco::Candidate, reco::CaloJetRef> hccj1;
+    edm::reftobase::RefHolder<reco::CaloJetRef> rhch1;
+    edm::reftobase::VectorHolder<reco::Candidate, reco::CaloJetRefVector> vhccj1;
+    edm::reftobase::RefVectorHolder<reco::CaloJetRefVector> rvhcj1;
+
+    edm::reftobase::Holder<reco::Candidate, reco::GenJetRef> hcgj1;
+    edm::reftobase::RefHolder<reco::GenJetRef> rhgj1;
+    edm::reftobase::VectorHolder<reco::Candidate, reco::GenJetRefVector> vhcgj1;
+    edm::reftobase::RefVectorHolder<reco::GenJetRefVector> rvhgj1;
+
+    edm::reftobase::Holder<reco::Candidate, reco::BasicJetRef> hcbj1;
+    edm::reftobase::RefHolder<reco::BasicJetRef> rhbj1;
+    edm::reftobase::VectorHolder<reco::Candidate, reco::BasicJetRefVector> vhbj1;
+    edm::reftobase::RefVectorHolder<reco::BasicJetRefVector> rvhbj1;
+
+    edm::reftobase::Holder<reco::Candidate, reco::PFJetRef> hcpj1;
+    edm::reftobase::RefHolder<reco::PFJetRef> rhpj1;
+    edm::reftobase::VectorHolder<reco::Candidate, reco::PFJetRefVector> vhpj1;
+    edm::reftobase::RefVectorHolder<reco::PFJetRefVector> rvhpj1;
   }
 }
 #endif
