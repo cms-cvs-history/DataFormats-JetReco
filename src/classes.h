@@ -10,6 +10,7 @@
 #include "DataFormats/JetReco/interface/JetToFloatAssociation.h"
 #include "DataFormats/Common/interface/Wrapper.h"
 #include "DataFormats/Common/interface/RefToBase.h"
+ #include "DataFormats/Common/interface/RefToBaseProd.h"
 #include "DataFormats/Common/interface/RefHolder.h"
 #include "DataFormats/Common/interface/Holder.h"
 
@@ -68,6 +69,7 @@ namespace {
     edm::reftobase::IndirectHolder<reco::Jet> rbj3;
     edm::reftobase::Holder<reco::Jet, reco::CaloJetRef> rbj4;
     edm::reftobase::Holder<reco::Candidate,edm::RefToBase<reco::Jet> >  rtbb6;
+    edm::RefToBaseProd<reco::Jet>   bp_jrtbp;
 
     edm::reftobase::Holder<reco::Candidate, reco::CaloJetRef> hccj1;
     edm::reftobase::RefHolder<reco::CaloJetRef> rhch1;
