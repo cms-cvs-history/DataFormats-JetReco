@@ -1,6 +1,6 @@
 // Jet.cc
 // Fedor Ratnikov, UMd
-// $Id: Jet.cc,v 1.10 2007/05/25 12:38:34 llista Exp $
+// $Id: Jet.cc,v 1.11 2007/05/30 22:06:43 fedor Exp $
 
 #include <sstream>
 #include "DataFormats/Math/interface/deltaR.h"
@@ -240,14 +240,8 @@ Jet::Constituents Jet::getJetConstituents () const {
 std::vector<const Candidate*> Jet::getJetConstituentsQuick () const {
   std::vector<const Candidate*> result;
   int nDaughters = numberOfDaughters();
-  if (nDaughters > 0) {
-    CandidateRef ref = daughterRef (0);
-    if (ref.isNonnull ()) {
-      const CandidateCollection* container = ref.product();
-      for (int i = 0; i < nDaughters; ++i) { 
-	result.push_back (&((*container)[daughterRef (i).key()]));
-      }
-    }
+  for (int i = 0; i < nDaughters; ++i) { 
+      result.push_back (daughter (i));
   }
   return result;
 }
