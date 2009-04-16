@@ -1,6 +1,6 @@
 // CaloJet.cc
 // Fedor Ratnikov UMd
-// $Id: CaloJet.cc,v 1.19 2008/05/10 09:29:16 fedor Exp $
+// $Id: CaloJet.cc,v 1.20 2008/05/26 11:22:12 arizzi Exp $
 #include <sstream>
 
 #include "FWCore/Utilities/interface/Exception.h"
@@ -60,6 +60,9 @@ CaloJet::LorentzVector CaloJet::physicsP4 (float fZVertex) const {
 
 CaloTowerPtr CaloJet::getCaloConstituent (unsigned fIndex) const {
    Constituent dau = daughterPtr (fIndex);
+
+   if ( dau.isNonnull() && dau.isAvailable() ) {
+
    const CaloTower* towerCandidate = dynamic_cast <const CaloTower*> (dau.get());
 
     if (towerCandidate) {
@@ -70,6 +73,12 @@ CaloTowerPtr CaloJet::getCaloConstituent (unsigned fIndex) const {
     else {
       throw cms::Exception("Invalid Constituent") << "CaloJet constituent is not of CaloTowere type";
     }
+
+   }
+
+   else {
+     return CaloTowerPtr();
+   }
 }
 
 
