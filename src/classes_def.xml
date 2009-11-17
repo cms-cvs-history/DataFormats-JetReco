@@ -67,7 +67,8 @@
   <function name="reco::JetFloatAssociation::hasJet"/>
 
   <class name="edm::Wrapper<reco::JetTracksAssociation::Container>" />
-  <class name="reco::JetTracksAssociation::Values"/>
+  <!--commented out because the dictionary is in DataFormats/TrackReco-->
+  <!--<class name="reco::JetTracksAssociation::Values"/-->
   <class name="reco::JetTracksAssociation::value_type"/>
   <class name="reco::JetTracksAssociation::transient_vector_type"/>
   <class name="reco::JetTracksAssociation::Ref"/>
@@ -141,4 +142,8 @@
   <class name="edm::Ptr<reco::JetID>" />
   <class name="edm::PtrVector<reco::JetID>" />
   
+  <class name="edm::Association<reco::GenJetCollection>" />
+  <class name="edm::Wrapper<edm::Association<reco::GenJetCollection> >" />
+  <class name="std::vector<reco::CaloJet::Specific>" />
+  <class name="std::vector<reco::PFJet::Specific>"   />
 </lcgdict>
