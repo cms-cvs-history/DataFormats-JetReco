@@ -10,11 +10,12 @@
  * in addition to generic Jet parameters
  *
  * \author Fedor Ratnikov, UMd, Apr 24, 2007
-  * \version   $Id: PFJet.h,v 1.18 2008/07/30 23:10:04 fedor Exp $
+  * \version   $Id: PFJet.h,v 1.17 2008/07/27 16:22:21 cbern Exp $
  ************************************************************/
 
 
 #include "DataFormats/JetReco/interface/Jet.h"
+#include "DataFormats/ParticleFlowCandidate/interface/PFCandidateFwd.h"
 #include "DataFormats/ParticleFlowCandidate/interface/PFCandidateFwd.h"
 #include "DataFormats/TrackReco/interface/TrackFwd.h"
 
@@ -85,12 +86,15 @@ class PFJet : public Jet {
   /// muonMultiplicity
   int muonMultiplicity () const {return m_specific.mMuonMultiplicity;}
 
+ 
+  /// convert generic constituent to specific type
+  static const reco::PFCandidate* getPFCandidate (const reco::Candidate* fConstituent);
 
   /// get specific constituent
-  virtual reco::PFCandidatePtr getPFConstituent (unsigned fIndex) const;
+  virtual const reco::PFCandidate* getPFConstituent (unsigned fIndex) const;
 
   /// get all constituents
-  virtual std::vector <reco::PFCandidatePtr> getPFConstituents () const;
+  virtual std::vector <const reco::PFCandidate*> getPFConstituents () const;
 
   /// \ brief get all tracks in the jets
   /// All PFCandidates hold a reference to a track. All the non-null
