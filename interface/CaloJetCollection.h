@@ -1,10 +1,11 @@
 // F.R.
-// $Id: CaloJetCollection.h,v 1.6 2007/08/20 17:53:30 fedor Exp $
+// $Id: CaloJetCollection.h,v 1.7 2007/08/24 17:35:23 fedor Exp $
 #ifndef JetReco_CaloJetCollection_h
 #define JetReco_CaloJetCollection_h
 
 #include <vector>
 #include "DataFormats/Common/interface/Ref.h"
+#include "DataFormats/Common/interface/FwdRef.h"
 #include "DataFormats/Common/interface/RefVector.h"
 
 #include "DataFormats/JetReco/interface/CaloJet.h"
@@ -14,7 +15,9 @@ namespace reco {
   typedef std::vector<CaloJet> CaloJetCollection;
   /// edm references
   typedef edm::Ref<CaloJetCollection> CaloJetRef;
+  typedef edm::FwdRef<CaloJetCollection> CaloJetFwdRef;
   typedef edm::RefVector<CaloJetCollection> CaloJetRefVector;
-  typedef edm::RefProd<CaloJetCollection> CaloJetRefProd;
+  typedef edm::RefProd<CaloJetCollection> CaloJetRefProd;  
+  typedef std::vector<edm::FwdRef<CaloJetCollection> > CaloJetFwdRefVector;
 }
 #endif

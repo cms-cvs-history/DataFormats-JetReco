@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "DataFormats/Common/interface/Ref.h"
+#include "DataFormats/Common/interface/FwdRef.h"
 #include "DataFormats/Common/interface/RefVector.h"
 #include "DataFormats/JetReco/interface/TrackJet.h"
 
@@ -13,7 +14,9 @@ namespace reco {
   typedef std::vector<TrackJet> TrackJetCollection;
   /// edm references
   typedef edm::Ref<TrackJetCollection> TrackJetRef;
+  typedef edm::FwdRef<TrackJetCollection> TrackJetFwdRef;
   typedef edm::RefVector<TrackJetCollection> TrackJetRefVector;
+  typedef std::vector<edm::FwdRef<TrackJetCollection> > TrackJetFwdRefVector;
   typedef edm::RefProd<TrackJetCollection> TrackJetRefProd;
 
 }
