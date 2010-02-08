@@ -39,12 +39,15 @@ namespace {
     CaloJetCollection o1;
     CaloJetRef r1;
     CaloJetFwdRef fwdr1;
+    CaloJetFwdPtr fwdp1;
     CaloJetRefVector rr1;
     CaloJetFwdRefVector fwdrr1;
+    CaloJetFwdPtrVector fwdpr1;
     CaloJetRefProd rrr1;
     edm::Wrapper<CaloJetCollection> w1;
     edm::Wrapper<CaloJetRefVector> wrv1;
     edm::Wrapper<CaloJetFwdRefVector> wfwdrv1;
+    edm::Wrapper<CaloJetFwdPtrVector> wfwdpv1;
     edm::reftobase::Holder<reco::Candidate, reco::CaloJetRef> rtb1;
     JetTrackMatch<CaloJetCollection> jtm1;
     edm::AssociationMap<edm::OneToMany<std::vector<reco::CaloJet>,std::vector<reco::Track>,unsigned int> > amp1;
@@ -53,24 +56,30 @@ namespace {
     GenJetCollection o2;
     GenJetRef r2;
     GenJetFwdRef fwdr2;
+    GenJetFwdPtr fwdp2;
     GenJetRefVector rr2;
     GenJetFwdRefVector fwdrr2;
+    GenJetFwdPtrVector fwdpr2;
     GenJetRefProd rrr2;
     edm::Wrapper<GenJetCollection> w2;
     edm::Wrapper<GenJetRefVector> wrv2;
     edm::Wrapper<GenJetFwdRefVector> wfwdrv2;
+    edm::Wrapper<GenJetFwdPtrVector> wfwdpv2;
     edm::reftobase::Holder<reco::Candidate, reco::GenJetRef> rtb2;
     JetTrackMatch<GenJetCollection> jtm2;
 
     BasicJetCollection o3;
     BasicJetRef r3;
     BasicJetFwdRef fwdr3;
+    BasicJetFwdPtr fwdp3;
     BasicJetRefVector rr3;
     BasicJetFwdRefVector fwdrr3;
+    BasicJetFwdPtrVector fwdrp3;
     BasicJetRefProd rrr3;
     edm::Wrapper<BasicJetCollection> w3;
     edm::Wrapper<BasicJetRefVector> wrv3;
     edm::Wrapper<BasicJetFwdRefVector> wfwdrv3;
+    edm::Wrapper<BasicJetFwdPtrVector> wfwdpv3;
     edm::reftobase::Holder<reco::Candidate, reco::BasicJetRef> rtb3;
     JetTrackMatch<BasicJetCollection> jtm3;
 
@@ -89,24 +98,30 @@ namespace {
     PFJetCollection o5;
     PFJetRef r5;
     PFJetFwdRef fwdr5;
+    PFJetFwdPtr fwdp5;
     PFJetRefVector rr5;
     PFJetFwdRefVector fwdrr5;
+    PFJetFwdPtrVector fwdrp5;
     PFJetRefProd rrr5;
     edm::Wrapper<PFJetCollection> w5;
     edm::Wrapper<PFJetRefVector> wfwdrv5;
     edm::Wrapper<PFJetFwdRefVector> wrv5;
+    edm::Wrapper<PFJetFwdPtrVector> wrp5;
     edm::reftobase::Holder<reco::Candidate, reco::PFJetRef> rtb5;
     JetTrackMatch<PFJetCollection> jtm5;
 
     TrackJetCollection o6;
     TrackJetRef r6;
     TrackJetFwdRef fwdr6;
+    TrackJetFwdPtr fwdp6;
     TrackJetRefVector rr6;
     TrackJetFwdRefVector fwdrr6;
+    TrackJetFwdPtrVector fwdrp6;
     TrackJetRefProd rrr6;
     edm::Wrapper<TrackJetCollection> w6;
     edm::Wrapper<TrackJetRefVector> wrv6;
     edm::Wrapper<TrackJetFwdRefVector> wfwdrv6;
+    edm::Wrapper<TrackJetFwdPtrVector> wfwdrp6;
     edm::reftobase::Holder<reco::Candidate, reco::TrackJetRef> rtb6;
     JetTrackMatch<TrackJetCollection> jtm6;
 

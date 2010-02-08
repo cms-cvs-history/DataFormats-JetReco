@@ -3,6 +3,7 @@
 #include <vector>
 #include "DataFormats/Common/interface/Ref.h"
 #include "DataFormats/Common/interface/FwdRef.h"
+#include "DataFormats/Common/interface/FwdPtr.h"
 #include "DataFormats/Common/interface/RefVector.h"
 
 #include "DataFormats/JetReco/interface/BasicJet.h"
@@ -14,8 +15,10 @@ namespace reco {
   /// edm references
   typedef edm::Ref<BasicJetCollection> BasicJetRef;
   typedef edm::FwdRef<BasicJetCollection> BasicJetFwdRef;
+  typedef edm::FwdPtr<BasicJet> BasicJetFwdPtr;
   typedef edm::RefVector<BasicJetCollection> BasicJetRefVector;
   typedef std::vector<edm::FwdRef<BasicJetCollection> > BasicJetFwdRefVector;
+  typedef std::vector<edm::FwdPtr<BasicJet> > BasicJetFwdPtrVector;
   typedef edm::RefProd<BasicJetCollection> BasicJetRefProd;
 }
 #endif
